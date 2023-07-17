@@ -7,7 +7,7 @@ this tool was created in collaboration with my friend https://twitter.com/medmah
 # what is nginZ
 nginZ is scanner for common Nginx misconfigurations and vulnerabilities
 # install
-`go get github.com/raoufmaklouf/nginZ`
+`go install -v github.com/raoufmaklouf/nginZ@latest`
 # Usage
 `cat nginx_Urls.txt | nginZ` <br /><br /><br />
 
