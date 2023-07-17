@@ -9,4 +9,8 @@ nginZ is scanner for common Nginx misconfigurations and vulnerabilities
 # install
 `go get github.com/raoufmaklouf/nginZ`
 # Usage
-`cat nginx_Urls.txt | nginZ`
+`cat nginx_Urls.txt | nginZ` <br /><br /><br />
+
+
+![alt text](https://github.com/raoufmaklouf/nginZ/blob/main/nginZ.jpeg)
+
