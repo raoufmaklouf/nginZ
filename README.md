@@ -5,7 +5,7 @@ Part tow https://labs.detectify.com/2021/02/18/middleware-middleware-everywhere-
 Big thank to detectify community  https://detectify.com<br />
 this tool was created in collaboration with my friend https://twitter.com/medmahmoudi_619 
 # what is nginZ
-Scanner for common Nginx misconfigurations and vulnerabilities
+nginZ is scanner for common Nginx misconfigurations and vulnerabilities
 # install
 `go get github.com/raoufmaklouf/nginZ`
 # Usage
