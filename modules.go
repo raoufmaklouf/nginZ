@@ -149,3 +149,15 @@ func controllingSocket(url string) {
 	}
 
 }
+func Xcrlf(url string) {
+	HostHeader := strings.Split(url, "/")[2]
+	normal := url + "/%20HTTP/1.1%0d%0aHost:%20" + HostHeader + "%0d%0a%0d%0a"
+	bad := url + "/%20HTTP/1.1%0d%0aKost:%20" + HostHeader + "%0d%0a%0d%0a"
+	_, normalRequest, _ := simpleRequest(normal, client, tr)
+	_, BadRequest, _ := simpleRequest(bad, client, tr)
+
+	if normalRequest != BadRequest && normalRequest != "" && BadRequest == "400" {
+
+		fmt.Println("\033[36m[Xcrlf]\033[0m  " + url + " realHost :" + normalRequest + " fakeHost :" + BadRequest)
+	}
+}

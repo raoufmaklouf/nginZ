@@ -23,7 +23,7 @@ func main() {
 			if lastchar == "/" {
 				cleanurl = line[:len(line)-1]
 			}
-			wg.Add(6)
+			wg.Add(7)
 			go func() {
 				defer wg.Done()
 				OffBySlash(cleanurl)
@@ -47,6 +47,10 @@ func main() {
 			go func() {
 				defer wg.Done()
 				controllingSocket(cleanurl)
+			}()
+			go func() {
+				defer wg.Done()
+				Xcrlf(cleanurl)
 			}()
 
 		}
